@@ -1,0 +1,23 @@
+#mybox {
+    height: 300px;
+    width: 300px;
+    background: red;
+    margin: 50px;
+}
+
+
+@media (min-width: 400px) {
+    #mybox {
+        height: 200px;
+        width: 200px;
+        background: blue;
+    }
+}
+
+@media (min-width: 600px) {
+    #mybox {
+        height: 500px;
+        width: 500px;
+        background: green;
+    }
+}

@@ -1,0 +1,18 @@
+h3 {
+  color: green;
+  padding-left: 50px;
+}
+.right {
+  text-align: right;
+}
+#xyz {
+  font-family: Arial;
+  border: solid 1px black;
+}
+#abc {
+  background: yellow;
+}
+#pqr {
+  padding: 30px;
+  margin: 30px;
+}

@@ -1,0 +1,27 @@
+#mybox {
+    height: 1000px;
+    width: 1000px;
+    background: red;
+    margin: 10px;
+}
+
+
+@media (max-width: 800px) {
+    #mybox {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    #mybox {
+        background: green;
+    }
+}
+
+@media (max-width: 400px) {
+    #mybox {
+        height: 200px;
+        width: 200px;
+    }
+}
