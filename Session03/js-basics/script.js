@@ -29,6 +29,8 @@ let obj = {
         fssf: 245452
     }
 }
+obj['x y']
+
 
 // functions 
 
