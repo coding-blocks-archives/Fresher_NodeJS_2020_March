@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="streaming-ops.js"></script>
+    <style>
+        #vals {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        if input is 3, -3, 5, -9, 4
+        nRMS =  √(((-3)^2 + (-9)^2) / 2)
+        pRMS =  √(((3)^2 + (5)^2 + (4)^2) / 3)
+        totalRMS = RMS of all the values
+     -->
+    <input id="vals" placeholder="enter values here, separated by comma">
+    <button id="calculate">Calculate</button>
+    <div>p<sub>RMS</sub> = <span id="pRMS"></span></div>
+    <div>n<sub>RMS</sub> = <span id="nRMS"></span></div>
+    <div>total<sub>RMS</sub> = <span id="tRMS"></span></div>
+</body>
+</html>
