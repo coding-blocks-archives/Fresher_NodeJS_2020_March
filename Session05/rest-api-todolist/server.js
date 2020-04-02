@@ -9,11 +9,14 @@ let todos = [
 ]
 
 app.get('/todos', (req, res) => {
-    const resp = todos.map((t, i) => {
-        t.id = i + 1
-        return t
-    })
-    res.send(todos)
+    const resp = todos.map((t, i) => ({
+        id: i + 1,
+        task: t.task,
+        done: t.done,
+        due: t.due,
+    }))
+
+    res.send(resp)
 })
 
 app.get('/todos/:id', (req, res) => {
@@ -33,10 +36,10 @@ app.get('/todos/:id', (req, res) => {
     }
     const t = todos[idx]
     res.send({
+        id: idx + 1,
         task: t.task,
         done: t.done,
         due: t.due,
-        id: idx + 1
     })
 
 })
