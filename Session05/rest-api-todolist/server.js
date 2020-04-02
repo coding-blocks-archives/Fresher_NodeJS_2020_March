@@ -3,12 +3,15 @@ const express = require('express')
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 let todos = [
   { task: 'Learn NodeJS', done: false, due: '2020-04-05' },
   { task: 'Learn SQL', done: false, due: '2020-04-06' },
   { task: 'Learn HTML and CSS', done: true, due: '2020-04-01' }
 ]
+
+app.use('/', express.static(__dirname + '/public'))
 
 app.get('/todos', (req, res) => {
   const resp = todos.map((t, i) => ({
