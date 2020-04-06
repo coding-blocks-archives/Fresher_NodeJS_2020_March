@@ -6,6 +6,7 @@ async function task () {
     const prabhas = await Users.findOne({
         where: { name: 'Prabhas' }
     })
+    // await Users.findByPk(11)
 
     console.log(prabhas)
     console.log(SEP)
