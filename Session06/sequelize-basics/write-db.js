@@ -26,14 +26,14 @@ async function task() {
   await db.sync()
 
   await Users.bulkCreate([
-    { name: 'Ram', age: 20 },
-    { name: 'Shyam', age: 21 },
-    { name: 'Neha', age: 22 },
-    { name: 'Rahul', age: 23 },
-    { name: 'Kriti', age: 24 },
-    { name: 'Priya', age: 25 },
-    { name: 'Kumar', age: 26 },
-    { name: 'Rahul', age: 27 },
+    { name: 'Raghu', age: 20 },
+    { name: 'Prabhas', age: 21 },
+    { name: 'Rohan', age: 22 },
+    { name: 'Raashi', age: 23 },
+    { name: 'Kaman', age: 24 },
+    { name: 'Pankaj', age: 25 },
+    { name: 'Vishal', age: 26 },
+    { name: 'Naina', age: 27 },
   ])
 }
 
