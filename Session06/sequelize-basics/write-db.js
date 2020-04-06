@@ -1,25 +1,4 @@
-const Sequelize = require('sequelize')
-
-const db = new Sequelize({
-  dialect: 'sqlite',
-  storage: __dirname + '/test.db',
-})
-
-const Users = db.define('user', {
-  id: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  name: {
-    type: Sequelize.STRING(40),
-    allowNull: false,
-  },
-  age: {
-    type: Sequelize.INTEGER,
-    defaultValue: 18,
-  },
-})
+const { db, Users } = require('./db')
 
 // db.sync()
 //   .then(() => {
@@ -35,10 +14,27 @@ const Users = db.define('user', {
 //     console.error(err)
 //   })
 
-
 async function task() {
-  await db.sync({force: true})
-  await Users.create({name: 'Ron Weasley'})
+  // this will modify columns with new changes in
+  // model definition without data loss
+  //   await db.sync({ alter: true })
+
+  // this will delete table and create fresh
+  // old data will be lost
+  //   await db.sync({ force: true })
+
+  await db.sync()
+
+  await Users.bulkCreate([
+    { name: 'Ram', age: 20 },
+    { name: 'Shyam', age: 21 },
+    { name: 'Neha', age: 22 },
+    { name: 'Rahul', age: 23 },
+    { name: 'Kriti', age: 24 },
+    { name: 'Priya', age: 25 },
+    { name: 'Kumar', age: 26 },
+    { name: 'Rahul', age: 27 },
+  ])
 }
 
 task()
